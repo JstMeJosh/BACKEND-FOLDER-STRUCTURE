@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>PRO Manifesto - Joshua Nnorom</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+  :root{
+    --bg: #0d1117;
+    --bg-panel: #11161d;
+    --border: #22303c;
+    --accent: #34d399;
+    --accent-2: #60a5fa;
+    --text: #e6edf3;
+    --text-dim: #8b98a5;
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+
+  body{
+    width: 794px;
+    height: 1123px;
+    background: var(--bg);
+    background-image:
+      linear-gradient(rgba(52,211,153,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(52,211,153,0.05) 1px, transparent 1px);
+    background-size: 28px 28px;
+    color: var(--text);
+    font-family: 'Space Grotesk', sans-serif;
+    padding: 40px 46px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  body::before{
+    content:"";
+    position:absolute; top:-120px; right:-120px;
+    width:320px; height:320px; border-radius:50%;
+    background: radial-gradient(circle, rgba(52,211,153,0.18), transparent 70%);
+  }
+
+  .terminal-bar{
+    display:flex; align-items:center; gap:8px;
+    margin-bottom: 20px;
+  }
+  .dot{ width:12px; height:12px; border-radius:50%; }
+  .dot.red{ background:#ff5f56; }
+  .dot.yellow{ background:#ffbd2e; }
+  .dot.green{ background:#27c93f; }
+  .terminal-label{
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px; color:var(--text-dim);
+    margin-left:10px; letter-spacing:0.5px;
+  }
+
+  .header-area {
+    margin-bottom: 20px;
+  }
+
+  .eyebrow{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--accent);
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+  }
+
+  h1{
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 6px;
+  }
+  h1 span{ color: var(--accent); }
+
+  .subtitle{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 14px;
+    color: var(--text-dim);
+  }
+
+  .candidate-card{
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    font-family:'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--text-dim);
+  }
+  .candidate-card b{ color: var(--text); }
+  .candidate-card .role{ color: var(--accent-2); }
+
+  .section-label{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--accent-2);
+    margin-bottom: 12px;
+    display:flex; align-items:center; gap:8px;
+  }
+  .section-label::before{ content:"//"; color: var(--text-dim); }
+
+  .points{
+    display:flex;
+    flex-direction:column;
+    gap: 12px;
+    flex-grow: 1;
+  }
+
+  .point{
+    display:flex;
+    gap: 14px;
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 13px 16px;
+  }
+
+  .point .idx{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--accent);
+    min-width: 34px;
+    font-weight: 700;
+  }
+
+  .point .body{ font-size: 14px; line-height:1.4; }
+  .point .body b{ color: var(--accent); font-weight:600; }
+
+  footer{
+    margin-top: 24px;
+    border-top: 1px dashed var(--border);
+    padding-top: 16px;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    font-family:'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--text-dim);
+  }
+
+  .brackets{ color: var(--accent); }
+  footer .vote{
+    background: var(--accent);
+    color: #05221a;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+</style>
+</head>
+<body>
+
+  <div>
+    <div class="terminal-bar">
+      <div class="dot red"></div>
+      <div class="dot yellow"></div>
+      <div class="dot green"></div>
+      <div class="terminal-label">~/tess-unilag/manifesto.pro.js</div>
+    </div>
+
+    <div class="header-area">
+      <div class="eyebrow">// TESS &mdash; TECHNOLOGY EDUCATION STUDENT SOCIETY, UNILAG</div>
+      <h1>Vote <span>Joshua Nnorom</span><br>for PRO</h1>
+      <div class="subtitle">$ git commit -m "bridging tech and communication"</div>
+    </div>
+
+    <div class="candidate-card">
+      <b>const</b> candidate = &#123;<br>
+      &nbsp;&nbsp;name: <b>"Joshua Nnorom"</b>,<br>
+      &nbsp;&nbsp;dept: <b>"Technology &amp; Vocational Education "</b>,<br>
+      &nbsp;&nbsp;stack: <b>"MERN Stack Developer"</b>,<br>
+      &nbsp;&nbsp;role: <span class="role">"Public Relations Officer"</span><br>
+      &#125;;
+    </div>
+
+    <div class="section-label">manifesto.points</div>
+
+    <div class="points">
+      <div class="point">
+        <div class="idx">01</div>
+        <div class="body"><b>Digital-first publicity</b> — consistent, well-designed flyers, reels &amp; recaps so every event gets seen.</div>
+      </div>
+      <div class="point">
+        <div class="idx">02</div>
+        <div class="body"><b>A real online presence</b> — a simple TESS website/blog to showcase our activities, wins &amp; tech tips.</div>
+      </div>
+      <div class="point">
+        <div class="idx">03</div>
+        <div class="body"><b>Fast, transparent info flow</b> — no member left in the dark on meetings, deadlines or opportunities.</div>
+      </div>
+      <div class="point">
+        <div class="idx">04</div>
+        <div class="body"><b>Data-driven engagement</b> — forms, polls &amp; newsletters to know what members actually want.</div>
+      </div>
+      <div class="point">
+        <div class="idx">05</div>
+        <div class="body"><b>Strong external relations</b> — representing TESS professionally to open doors for collabs &amp; sponsorships.</div>
+      </div>
+      <div class="point">
+        <div class="idx">06</div>
+        <div class="body"><b>Documentation culture</b> — every event captured &amp; archived, building our Society's story over time.</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div><span class="brackets">&lt;</span>Techie. Reliable. Ready to serve.<span class="brackets">/&gt;</span></div>
+    <div class="vote">VOTE JOSHUA NNOROM</div>
+  </footer>
+
+</body>
+</html>
